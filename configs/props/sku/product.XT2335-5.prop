@@ -1,0 +1,12 @@
+#
+# XT2335-5 variant specific props
+#
+
+ro.product.bootimage.model=moto g53j 5G
+ro.product.model=moto g53j 5G
+ro.product.odm.model=moto g53j 5G
+ro.product.product.model=moto g53j 5G
+ro.product.system.model=moto g53j 5G
+ro.product.system_ext.model=moto g53j 5G
+ro.product.vendor.model=moto g53j 5G
+ro.product.vendor_dlkm.model=moto g53j 5G

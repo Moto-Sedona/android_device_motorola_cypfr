@@ -119,5 +119,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci_SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-mtp-SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
+# SKU
+# Variant Properties
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,product.*.prop,$(LOCAL_PATH)/configs/props/sku/,$(TARGET_COPY_OUT_PRODUCT))
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/penang/penang-vendor.mk)
