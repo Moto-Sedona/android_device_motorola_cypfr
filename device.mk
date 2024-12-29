@@ -36,13 +36,11 @@ PRODUCT_PACKAGES += \
     LineageSystemUIPenang \
     SettingsResPenang \
     NfcResPenang \
-    SettingsProviderResPenang \
     SystemUIResPenang \
     RegulatoryInfoOverlayXT2335-5
 
 PRODUCT_PACKAGES += \
     FrameworksResPenangSB \
-    SettingsProviderResPenangSB \
     RegulatoryInfoOverlayXT2335-4
 
 PRODUCT_PACKAGES += \
