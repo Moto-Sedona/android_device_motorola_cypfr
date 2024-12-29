@@ -382,6 +382,9 @@ product/etc/felica/common.cfg
 product/etc/felica/mfm.cfg
 product/etc/felica/mfs.cfg
 
+# Felica - APK
+product/priv-app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED;SKIPAPKCHECKS
+
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
