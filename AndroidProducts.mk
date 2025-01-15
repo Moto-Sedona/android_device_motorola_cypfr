@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_penang.mk
+    $(LOCAL_DIR)/yaap_penang.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_penang-user \
-    lineage_penang-userdebug \
-    lineage_penang-eng
+    yaap_penang-user \
+    yaap_penang-userdebug \
+    yaap_penang-eng
