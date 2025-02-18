@@ -66,6 +66,7 @@ vendor/lib/libchilog.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libipebpsstriping.so
 vendor/lib/libipebpsstriping170.so
+vendor/lib/libiqi_bridge.so
 vendor/lib/libjpege.so
 vendor/lib/libmfec.so
 vendor/lib/libmmcamera_bestats.so
@@ -84,6 +85,7 @@ vendor/lib/libofflinelog.so
 vendor/lib/libopencv.so
 vendor/lib/libopestriping.so
 vendor/lib/libos.so
+vendor/lib/libportrait_repair_ppl3_ocl.so
 vendor/lib/libpowercore.so
 vendor/lib/libqll10.so
 vendor/lib/libqllengine.so
@@ -142,6 +144,7 @@ vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
+vendor/lib64/libiqi_bridge.so
 vendor/lib64/libjpege.so
 vendor/lib64/libloc_api_wds.so
 vendor/lib64/liblowlight_ai_portrait.arcsoft.so
@@ -162,6 +165,7 @@ vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
+vendor/lib64/libportrait_repair_ppl3_ocl.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
