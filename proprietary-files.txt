@@ -280,7 +280,11 @@ product/etc/permissions/com.motorola.camera3.lens.xml:vendor/etc/permissions/com
 product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
 product/etc/permissions/com.motorola.moto-uirefresh.xml
 
-# NFC
+# NFC (configs)
+vendor/etc/libnfc-mtp-SN100.conf:vendor/etc/libnfc-nxp.conf
+vendor/etc/libnfc-nci_SN100.conf:vendor/etc/libnfc-nci.conf
+
+# NFC (Firmware)
 vendor/lib64/libsn100u_fw.so
 
 # Embedded Secure Element power manager
