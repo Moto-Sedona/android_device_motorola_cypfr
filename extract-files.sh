@@ -9,6 +9,23 @@
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
+function blob_fixup() {
+    case "${1}" in
+        vendor/etc/libnfc-nxp.conf)
+            [[ -z "${2}" ]] && return 0
+            sed -i "/DEFAULT_ISODEP_ROUTE/ s/0x01/0xC0/g" "${2}"
+            sed -i "/DEFAULT_SYS_CODE_ROUTE/ s/0x00/0xC0/g" "${2}"
+            sed -i "/DEFAULT_OFFHOST_ROUTE/ s/0x01/0xC0/g" "${2}"
+            sed -i "/OFFHOST_ROUTE_ESE/ s/01/C0/g" "${2}"
+            echo "DEFAULT_NFCF_ROUTE=0xC0" >> "${2}"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+
+    return 0
+}
 
 function blob_fixup_dry() {
     blob_fixup "$1" ""
