@@ -19,6 +19,10 @@ function blob_fixup() {
             sed -i "/OFFHOST_ROUTE_ESE/ s/01/C0/g" "${2}"
             echo "DEFAULT_NFCF_ROUTE=0xC0" >> "${2}"
             ;;
+        vendor/lib64/libmotohid.so)
+            [[ -z "${2}" ]] && return 0
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
