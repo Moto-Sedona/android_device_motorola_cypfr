@@ -461,9 +461,6 @@ vendor/etc/thermal-engine-penang-game-perf.conf
 vendor/etc/thermal-engine-penang.conf
 vendor/etc/thermal-engine.conf
 
-# EUICC
-product/etc/permissions/android.hardware.telephony.euicc.xml
-
 # Touch firmware
 vendor/firmware/focaltech-csot-ft8057-05-0000-penang.bin
 
