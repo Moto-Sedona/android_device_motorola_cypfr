@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from penang device
 $(call inherit-product, device/motorola/penang/device.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common 2by2 stuff.
+$(call inherit-product, vendor/2by2/config/common_full_phone.mk)
 
-PRODUCT_NAME := yaap_penang
+PRODUCT_NAME := penang
 PRODUCT_DEVICE := penang
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
