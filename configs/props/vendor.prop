@@ -5,7 +5,6 @@ bluetooth.device.default_name=moto g53j 5G
 persist.vendor.camera.physical.num=3
 
 # FM
-vendor.qcom.bluetooth.soc=cherokee
 ro.vendor.fm.use_audio_session=true
 
 # Motorola
