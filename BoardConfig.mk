@@ -16,7 +16,7 @@ TARGET_BOOTLOADER_BOARD_NAME := penang
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hab.product=penang
-TARGET_KERNEL_CONFIG := vendor/penang_defconfig
+TARGET_KERNEL_CONFIG += vendor/ext_config/moto-holi-penang.config
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules/modules.load))
