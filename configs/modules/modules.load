@@ -71,5 +71,3 @@ ldo_vibrator_mmi.ko
 nova_0flash_mmi.ko
 focaltech_0flash_v2_mmi.ko
 cci_intf.ko
-moto_mm.ko
-moto_swap.ko
