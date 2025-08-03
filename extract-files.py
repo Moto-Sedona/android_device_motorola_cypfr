@@ -39,7 +39,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libmotohid.so': blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/sensors.moto.so': blob_fixup()
-        .add_needed('libbase_shim.so'),    
+        .add_needed('libbase_shim.so'),
+    'vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so': blob_fixup()
+        .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
