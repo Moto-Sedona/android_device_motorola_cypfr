@@ -11,18 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from penang device
 $(call inherit-product, device/motorola/penang/device.mk)
 
-# Inherit some common 2by2 stuff.
-$(call inherit-product, vendor/2by2/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := penang
+PRODUCT_NAME := lineage_penang
 PRODUCT_DEVICE := penang
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g53 5G
-
-CUSTOM_PROCESSOR_INFO := Qualcomm Snapdragon 480 Plus 5G
-
-TARGET_BUILD_GAPPS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
