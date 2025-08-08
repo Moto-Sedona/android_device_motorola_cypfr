@@ -15,7 +15,9 @@ wsa881x_analog_dlkm.ko
 q6_dlkm.ko
 wcd938x_dlkm.ko
 wcd9xxx_dlkm.ko
+lzo_compress.ko
 va_macro_dlkm.ko
+lzo-rle.ko
 camera.ko
 tx_macro_dlkm.ko
 q6_pdr_dlkm.ko
@@ -23,12 +25,14 @@ mbhc_dlkm.ko
 platform_dlkm.ko
 aw87xxx_dlkm.ko
 pinctrl_lpi_dlkm.ko
+lzo.ko
 native_dlkm.ko
 bt_fm_slim.ko
 q6_notifier_dlkm.ko
 wcd937x_slave_dlkm.ko
 adsp_loader_dlkm.ko
 btpower.ko
+lzo_decompress.ko
 nfc_i2c.ko
 aw882xx_k419.ko
 zram.ko
