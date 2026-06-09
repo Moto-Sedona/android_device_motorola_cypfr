@@ -31,7 +31,7 @@ cd $firmware_path
 touch_product_string=$(ls $touch_class_path)
 if [[ -d /sys/class/touchscreen/ft8057 ]]; then
     echo "focaltech"
-    firmware_file="focaltech-csot-ft8057-05-0000-penang.bin"
+    firmware_file="focaltech-csot-ft8057-05-0000-cypfr.bin"
     touch_path=/sys$(cat $touch_class_path/$touch_product_string/path | tail -n 1)
     wait_for_poweron
     echo $firmware_file > $touch_path/doreflash

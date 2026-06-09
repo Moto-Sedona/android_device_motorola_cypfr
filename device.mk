@@ -32,20 +32,14 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResPenang \
-    LineageSystemUIPenang \
-    SettingsResPenang \
-    NfcResPenang \
-    SystemUIResPenang
+    FrameworksResCypfr \
+    LineageSystemUICypfr \
+    SettingsResCypfr \
+    SystemUIResCypfr
 
 # Overlays (SKU)
 PRODUCT_PACKAGES += \
-    FrameworksResPenangSB \
-    RegulatoryInfoOverlayXT2335-1 \
-    RegulatoryInfoOverlayXT2335-2 \
-    RegulatoryInfoOverlayXT2335-3 \
-    RegulatoryInfoOverlayXT2335-4 \
-    RegulatoryInfoOverlayXT2335-5
+    RegulatoryInfoOverlayXT2219-1
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -105,7 +99,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.recovery.penang.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.penang.rc \
+    $(LOCAL_PATH)/recovery/root/init.recovery.cypfr.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.cypfr.rc \
     $(LOCAL_PATH)/recovery/root/load_ts_firmware.sh:$(TARGET_COPY_OUT_RECOVERY)/root/load_ts_firmware.sh
 
 # SKU
@@ -115,10 +109,10 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.penang
+    sensors.cypfr
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/penang/penang-vendor.mk)
+$(call inherit-product, vendor/motorola/cypfr/cypfr-vendor.mk)

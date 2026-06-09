@@ -4,20 +4,33 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-DEVICE_PATH := device/motorola/penang
+DEVICE_PATH := device/motorola/cypfr
 
 # Inherit from motorola sm6375-common
 include device/motorola/sm6375-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := penang
+TARGET_BOOTLOADER_BOARD_NAME := cypfr
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hab.product=penang
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=cypfr
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-TARGET_KERNEL_CONFIG := vendor/penang_defconfig
+TARGET_KERNEL_CONFIG += vendor/ext_config/moto-holi-cypfr.config
+
+# Kernel - Prebuilt
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)-kernel/dtb.img:$(TARGET_COPY_OUT)/dtb.img \
+    $(DEVICE_PATH)-kernel/kernel:kernel \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/ramdisk-modules/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/vendor-modules/,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules)
+BOARD_KERNEL_SEPARATED_DTBO := 
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules/modules.load))
@@ -30,8 +43,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml
 
 # Partitions
-BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 4961861632 # ((SUPER_PARTITION_SIZE / 2) - 4194304)
-BOARD_SUPER_PARTITION_SIZE := 4965011456
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 6613893120 # ((SUPER_PARTITION_SIZE / 2) - 4194304)
+BOARD_SUPER_PARTITION_SIZE := 107079512064
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
@@ -42,12 +55,12 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # AVB
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 22
-BOARD_AVB_ROLLBACK_INDEX := 22
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 16
+BOARD_AVB_ROLLBACK_INDEX := 16
 
 # Security
 BOOT_SECURITY_PATCH := 2024-06-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # inherit from the proprietary version
-include vendor/motorola/penang/BoardConfigVendor.mk
+include vendor/motorola/cypfr/BoardConfigVendor.mk
