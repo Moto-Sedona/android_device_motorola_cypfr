@@ -6,3 +6,19 @@
 
 soong_namespace {
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_esepowermanager_interface",
+    interfaces: [
+        "vendor.qti.esepowermanager@1.0::IEsePowerManager",
+        "vendor.qti.esepowermanager@1.1::IEsePowerManager",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_hardware_qteeconnector_interface",
+    interfaces: [
+        "vendor.qti.hardware.qteeconnector@1.0::IAppConnector",
+        "vendor.qti.hardware.qteeconnector@1.0::IGPAppConnector",
+    ],
+}
