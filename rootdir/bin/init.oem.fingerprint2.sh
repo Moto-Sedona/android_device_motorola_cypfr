@@ -56,13 +56,9 @@ for i in $(seq 1 2)
 do
 
 setprop $prop_fps_status $FPS_STATUS_NONE
-if [ $fps == $FPS_VENDOR_EGIS ]; then
-    log "start ets_hal"
-    start ets_hal
-else
-    log "start fpc_hal"
-    start fps_hal
-fi
+
+log "start vendor.fingerprint-default"
+start vendor.fingerprint-default
 
 log "wait for HAL finish ..."
 fps_status=$(getprop $prop_fps_status)

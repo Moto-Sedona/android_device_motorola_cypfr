@@ -4,6 +4,9 @@ bluetooth.device.default_name=moto g53j 5G
 # Camera
 persist.vendor.camera.physical.num=3
 
+# Fingerprint
+persist.vendor.fingerprint.type=side
+
 # FM
 ro.vendor.fm.use_audio_session=true
 
